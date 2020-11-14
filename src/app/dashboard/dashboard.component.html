@@ -1,0 +1,425 @@
+<div fxFlexFill>
+
+    <div fxLayout="column" fxLayout.xs="column" fxFlexFill>
+
+        <div fxFlex="10" fxLayout="row" style="background: #181d30; padding-left: 20px;" fxFlexFill>
+            <!-- style="background: #181d30;" -->
+            <div fxFlex fxLayoutAlign="start center" style="color: white;font-size: x-large;">
+                Governance Dashboard
+            </div>
+
+            <div fxFlex="30" fxLayoutAlign="end center" fxLayoutGap="20px" fxLayoutOffset="20px" fxLayout="row">
+                <mat-icon class="hr-icon radius-icon">add</mat-icon>
+                <mat-chip-list fxFlex>
+                    <mat-chip>
+                        <mat-icon>account_circle</mat-icon> Tony
+
+                    </mat-chip>
+                </mat-chip-list>
+            </div>
+        </div>
+        <div fxFlex="1 1 calc(50% + 10px)" fxLayout="row" fxFlexOffset="-20px">
+            <mat-card style="margin: 10px 10px 0px 10px;" fxFlex="1 1 calc(50%-10px)" fxLayout="column">
+                <div fxLayout="row">
+                    <div fxFlex fxLayoutAlign="start center">
+                        <mat-icon style="margin-right: 20px;">account_balance</mat-icon>
+                        <mat-label>OverView</mat-label>
+
+                    </div>
+                    <mat-form-field fxFlex="30" style="margin: 0px;height: 75px;" appearance="outline">
+                        <mat-label>All entities</mat-label>
+                        <mat-select>
+                            <mat-option *ngFor="let food of foods" [value]="food.value">
+                                {{entities.viewValue}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+
+                <div fxLayout="row" fxLayoutGap="5px" style="margin-bottom: 10px;">
+                    <div fxFlex class="border">
+                        <div fxLayout="row" style="margin: 5px;" fxLayoutAlign="start center">
+                            <mat-icon style="margin-right: 20px;">check_circle_outline</mat-icon>
+                            <div fxFlex>
+
+                                <div class="border-bottom">
+                                    Regulations
+                                </div>
+
+                                <div fxLayout="row" fxLayoutGap="2px">
+                                    <div fxFlex class="completed bold">
+                                        100%
+                                    </div>
+                                    <div fxFlex class="delayed bold">
+                                        0%
+                                    </div>
+                                    <div fxFlex class="not-completed bold">
+                                        0%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div fxFlex style="border: 1px solid;">
+                        <div fxLayout="row" style="margin: 5px;" fxLayoutAlign="start center">
+                            <mat-icon style="margin-right: 20px;">check_circle_outline</mat-icon>
+                            <div fxFlex>
+
+                                <div class="border-bottom">
+                                    Standards
+                                </div>
+
+                                <div fxLayout="row" fxLayoutGap="2px">
+                                    <div fxFlex class="completed bold">
+                                        71%
+                                    </div>
+                                    <div fxFlex class="delayed bold">
+                                        22%
+                                    </div>
+                                    <div fxFlex class="not-completed bold">
+                                        7%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div fxFlex style="border: 1px solid;">
+                        <div fxLayout="row" style="margin: 5px;" fxLayoutAlign="start center">
+                            <mat-icon style="margin-right: 20px;">check_circle_outline</mat-icon>
+                            <div fxFlex>
+
+                                <div class="border-bottom">
+                                    Internal Control
+                                </div>
+
+                                <div fxLayout="row" fxLayoutGap="2px">
+                                    <div fxFlex class="completed bold">
+                                        74%
+                                    </div>
+                                    <div fxFlex class="delayed bold">
+                                        6%
+                                    </div>
+                                    <div fxFlex class="not-completed bold">
+                                        20%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div fxFlex style="border: 1px solid;">
+                        <div fxLayout="row" style="margin: 5px;" fxLayoutAlign="start center">
+                            <mat-icon style="margin-right: 20px;">check_circle_outline</mat-icon>
+                            <div fxFlex>
+
+                                <div class="border-bottom">
+                                    Others
+                                </div>
+
+                                <div fxLayout="row" fxLayoutGap="2px">
+                                    <div fxFlex class="completed bold">
+                                        100%
+                                    </div>
+                                    <div fxFlex class="delayed bold">
+                                        0%
+                                    </div>
+                                    <div fxFlex class="not-completed bold">
+                                        0%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div fxLayout="row" fxLayoutGap="5px" style="margin-bottom: 10px;">
+                    <mat-card fxFlex fxLayout="column" class="card">
+                        <div fxFlex fxLayoutAlign="center center" class="completed-bg bold font-white">
+                            COMPLETED
+                        </div>
+                        <div style="width: 100%;" fxFlex class="completed bold" fxLayoutAlign="center center">
+                            84%
+                        </div>
+                    </mat-card>
+                    <mat-card fxFlex fxLayout="column" class="card">
+                        <div fxFlex fxLayoutAlign="center center" class="delayed-bg bold font-white">
+                            DELAYED
+                        </div>
+                        <div style="width: 100%;" fxFlex class="delayed bold" fxLayoutAlign="center center">
+                            12%
+                        </div>
+                    </mat-card>
+                    <mat-card fxFlex fxLayout="column" class="card">
+                        <div fxFlex fxLayoutAlign="center center" class="not-completed-bg bold font-white">
+                            NOT COMPLETED
+                        </div>
+                        <div style="width: 100%;" fxFlex class="not-completed bold" fxLayoutAlign="center center">
+                            4%
+                        </div>
+                    </mat-card>
+                    <mat-card fxFlex fxLayout="column" class="card">
+                        <div fxFlex fxLayoutAlign="center center" class="diligence-bg bold font-white">
+                            DILIGENCE SCORE
+                        </div>
+                        <div style="width: 100%;" fxFlex class="diligence bold" fxLayoutAlign="center center">
+                            8.9
+                        </div>
+                    </mat-card>
+                </div>
+
+                <mat-expansion-panel [ngClass]="{'border-bottom2' : panelOpenState1}" (opened)="panelOpenState1 = true"
+                    (closed)="panelOpenState1 = false" hideToggle="true">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Company policy Regulation Category
+                        </mat-panel-title>
+                        <mat-panel-description fxLayoutAlign="end center">
+
+                            <div fxLayout="row" fxLayoutGap="20px">
+                                <div fxFlex class="completed bold">
+                                    100%
+                                </div>
+                                <div fxFlex class="delayed bold">
+                                    0%
+                                </div>
+                                <div fxFlex class="not-completed bold">
+                                    0%
+                                </div>
+                                <mat-icon class="icon-color" *ngIf="!panelOpenState1">keyboard_arrow_right</mat-icon>
+                                <mat-icon class="icon-color" *ngIf="panelOpenState1">keyboard_arrow_down</mat-icon>
+                            </div>
+
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <mat-divider [inset]="true"></mat-divider>
+                    <div fxLayout="row" fxLayoutGap="20px" style="margin-top: 5px;">
+                       
+                        <mat-icon  style="color: #eabc0f;">star</mat-icon> 
+                        <mat-icon>supervisor_account</mat-icon>
+                        <div fxFlex>
+                            [CID-16090024] Weekly Database Baseup
+                        </div>
+                        
+                        <div  fxLayoutAlign="end start" fxLayoutGap="20px" >
+                            <div fxFlex class="completed bold">
+                                87%
+                            </div>
+                            <div fxFlex class="delayed bold">
+                                4%
+                            </div>
+                            <div fxFlex class="not-completed bold">
+                                13%
+                            </div>
+
+                            <div fxLayoutAlign="center center" style="background-color: #f9f9f9; margin: 10px;color: blue;" fxLayout="column">
+                                24 <br>
+                                May
+                            </div>
+                        </div>
+                        
+                    
+                    </div>
+                </mat-expansion-panel>
+                <mat-expansion-panel [ngClass]="{'border-bottom2' : panelOpenState2}" style="padding: 0px;"
+                    (opened)="panelOpenState2 = true" (closed)="panelOpenState2 = false" hideToggle="true">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            ACRA Compliance - Accounting and Corporate Regulatory Authority Act
+                        </mat-panel-title>
+                        <mat-panel-description fxLayoutAlign="end center">
+                            <div fxLayout="row" fxLayoutGap="20px">
+                                <div fxFlex class="completed bold">
+                                    87%
+                                </div>
+                                <div fxFlex class="delayed bold">
+                                    4%
+                                </div>
+                                <div fxFlex class="not-completed bold">
+                                    13%
+                                </div>
+                                <mat-icon class="icon-color" *ngIf="!panelOpenState2">keyboard_arrow_right</mat-icon>
+                                <mat-icon class="icon-color" *ngIf="panelOpenState2">keyboard_arrow_down</mat-icon>
+                            </div>
+                        </mat-panel-description>
+
+                    </mat-expansion-panel-header>
+
+                    <mat-divider [inset]="true"></mat-divider>
+                    <div fxLayout="row" fxLayoutGap="20px" style="margin-top: 5px;">
+                       
+                        <mat-icon  style="color: #eabc0f;">star</mat-icon> 
+                        <mat-icon>supervisor_account</mat-icon>
+                        <div fxFlex>
+                            [CID-16090024] Weekly Database Baseup
+                        </div>
+                        
+                        <div  fxLayoutAlign="end start" fxLayoutGap="20px">
+                            <div fxFlex class="completed bold">
+                                87%
+                            </div>
+                            <div fxFlex class="delayed bold">
+                                4%
+                            </div>
+                            <div fxFlex class="not-completed bold">
+                                13%
+                            </div>
+
+                            <div fxLayoutAlign="center center" style="background-color: #f9f9f9; margin: 10px;color: blue;" fxLayout="column">
+                                24 <br>
+                                May
+                            </div>
+                        </div>
+                        
+                    
+                    </div>
+                </mat-expansion-panel>
+            </mat-card>
+
+            <mat-card style="margin: 10px 10px 0px 0px;padding: 0px;" fxFlex="1 1 calc(50%-20px)">
+                <div>
+                    <div fxLayout="row" style="padding: 16px;">
+                        <div fxFlex>
+                            <div>
+                                Tuesday
+                            </div>
+                            <div style="font-weight: bolder;font-size: x-large;">
+                                05 December
+                            </div>
+                            <div>
+                                2019
+                            </div>
+                        </div>
+                        <div fxLayoutAlign="end center">
+                            <button mat-stroked-button style="color: blue;">SYNC TO YOUR DEVICE CALENDAR</button>
+                            <mat-icon style="font-size: xx-large;">fullscreen</mat-icon>
+                        </div>
+
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <div class="hr-line" fxFlex="90"></div>
+                        <!-- <div class="hr-icon"><i class="material-icons">favorite color="primary" class="side-icon icon-active" </i></div> -->
+                        <!-- <button mat-icon-button class="hr-icon">
+                            <mat-icon >arrow_back_ios</mat-icon>
+                        </button>
+                        <button mat-icon-button class="hr-icon">
+                            <mat-icon >arrow_forward_ios</mat-icon>
+                        </button> -->
+                        <mat-icon class="hr-icon" style="margin-right: 4px;">arrow_back_ios</mat-icon>
+                        <mat-icon class="hr-icon">arrow_forward_ios</mat-icon>
+                        <div class="hr-line" fxFlex></div>
+                    </div>
+                    
+                    <div style="margin: 0px 16px 0px 16px;">
+                        <ng-container *ngFor="let cd of calenderData; let i = index">
+                            
+                            <mat-divider *ngIf="i != 0" inset="true"></mat-divider>
+                            <mat-expansion-panel hideToggle="true" class="mat-elevation-z0">
+                                <mat-expansion-panel-header fxLayoutGap="10px">
+                                    <mat-panel-title fxLayoutGap="10px">
+                                        <mat-icon>supervisor_account
+                                        </mat-icon>
+                                       
+                                        
+                                        <div fxLayoutAlign="start center">
+                                            <mat-icon *ngIf="cd.isFavourite" style="color: #eabc0f;">star</mat-icon>
+                                            {{cd.subject}}
+                                        </div>
+                                    </mat-panel-title>
+                                    <mat-panel-description style="font-weight: bolder;"  fxLayoutAlign="end center">
+    
+                                        {{cd.time}}
+    
+                                    </mat-panel-description>
+                                </mat-expansion-panel-header>
+                                <div  fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px">
+                                    <button mat-stroked-button style="color: green;">Done</button>
+                                    <button mat-stroked-button style="color: #eabc0f;">NEED MORE TIME</button>
+                                    <button mat-stroked-button style="color: red;">CANNOT COMPLY</button>
+                                </div>
+                            </mat-expansion-panel>
+                        </ng-container>
+                       
+                    </div>
+
+                </div>
+            </mat-card>
+        </div>
+        <div fxFlex="1 1 calc(40% + 10px)">
+            <mat-card style="margin: 10px;" fxFlex="1 1 calc(50%-10px)">
+                <div fxLayout="column" fxFlexFill>
+                    <div fxLayout="row">
+                        <div fxFlex fxLayoutAlign="start center">
+                            <mat-icon style="margin-right: 20px;">leaderboard</mat-icon>
+                            <mat-label>Trend Analysis</mat-label>
+
+                        </div>
+                        <mat-form-field fxFlex="30" style="margin: 0px;height: 75px;" appearance="outline">
+                            <mat-label>All categories</mat-label>
+                            <mat-select>
+                                <mat-option *ngFor="let food of foods" [value]="food.value">
+                                    {{trends.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <google-chart style="width: 100%;" fxFlex type="ComboChart" [data]="data" [columns]="columnNames"
+                        [options]="options"></google-chart>
+                </div>
+
+
+            </mat-card>
+
+            <mat-card style="margin: 10px 10px 10px 0px;" fxFlex="1 1 calc(50%-20px)">
+                <div fxLayout="column" fxLayoutGap="10px">
+                    <div fxLayoutAlign="start center">
+                        <mat-icon style="margin-right: 20px;">update</mat-icon>
+                        <mat-label>Workroom Updates</mat-label>
+
+                    </div>
+                    <div *ngFor="let workRoomUpdate of WorkRoomUpdates" fxLayout="row" fxFlexOffset="20">
+                        <div class="dot"></div>
+                        <div fxLayout="column">
+                            <div class="msj macro" fxLayout="column" style="width: 100%;">
+                                <div fxLayout="row" fxFlexFill>
+                                    <div style="color: blue;">{{workRoomUpdate.name}}:&nbsp;</div>
+                                    <div>{{workRoomUpdate.event}}</div>
+                                    <div fxFlex fxLayoutAlign="end center">{{workRoomUpdate.date}}</div>
+
+                                </div>
+                                <div fxLayout="row" fxFlexFill>
+                                    <mat-icon style="margin-right: 20px;">face</mat-icon>
+                                    <div fxFlex="70">
+                                        <span style="color: green;min-width: fit-content;">{{workRoomUpdate.name2}}:
+                                        </span>
+                                        {{workRoomUpdate.update}}
+                                    </div>
+                                    <div fxFlex fxLayoutAlign="end center">
+                                        <mat-icon style="color: blue;margin-right: 20px;">open_in_new</mat-icon>
+                                        <mat-icon style="color: red;">close</mat-icon>
+                                    </div>
+
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <!-- <div class="avatar"><img class="img-circle" style="width:100%;" src="'+ me.avatar +'" /></div>
+                             <div class="text text-l">
+                                 <p> text </p>
+                                 <p><small>date</small></p>
+                             </div> -->
+                    <!-- <div *ngFor="let workRoomUpdate of WorkRoomUpdates">
+                        {{workRoomUpdate.name}} {{workRoomUpdate.event}}<br>
+                        <mat-icon style="margin-right: 20px;">leaderboard</mat-icon>
+                        {{workRoomUpdate.name2}}: {{workRoomUpdate.update}}
+                        
+                    </div> -->
+
+                </div>
+
+            </mat-card>
+        </div>
+
+    </div>
+
+</div>
